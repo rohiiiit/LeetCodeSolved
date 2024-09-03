@@ -2,11 +2,12 @@ class Solution {
     public int lengthOfLongestSubstring(String s) {
     int maxLength = 0;   
     Set<Character> set = new HashSet<>();
-    if(s.contains(" ")){
+    if(s.contains(" ") || s.length() == 1){
                 maxLength++;
-            }
+        }
     for(int i=0; i<s.length()-1; i++){
         set.add(s.charAt(i));
+      
         int j = i+1;
         
         while(j < s.length()){
